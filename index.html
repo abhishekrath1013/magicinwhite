@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Magic In White | VFX &amp; Design Studio</title>
+<meta name="description" content="We help brands find their voice. Innovative design, VFX, posters, and animations.">
+<meta name="theme-color" content="#1C06C3">
+<script>try{if(sessionStorage.getItem('miw-nav'))document.documentElement.classList.add('is-arriving')}catch(e){}</script>
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://ik.imagekit.io" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- ░░ PRELOADER ░░ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="pl-slats" id="plSlats"></div>
+  <div class="pl-inner">
+    <div class="pl-logo"><img src="assets/logo-full-orange.png" alt="" width="583" height="895"></div>
+    <div class="pl-lines" id="plLines"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+  <div class="pl-foot">
+    <span class="mono">Magic In White</span>
+    <span class="pl-count"><b id="plCount">000</b><em>%</em></span>
+  </div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__label"></span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ░░ HEADER ░░ -->
+<header class="header" id="header">
+  <a href="index.html" class="header__logo" aria-label="Magic In White — home" data-cursor="Home"><img src="assets/logo-mark-blue.png" alt="" width="380" height="435"></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu" data-magnetic>
+    <span class="burger__txt"><span data-open>Menu</span><span data-close>Close</span></span>
+    <span class="burger__bars"><i></i><i></i><i></i><i></i></span>
+  </button>
+</header>
+
+<!-- ░░ MENU ░░ -->
+<nav class="menu" id="menu" aria-label="Main" aria-hidden="true">
+  <div class="menu__slats" id="menuSlats"></div>
+  <div class="menu__body">
+    <ol class="menu__links">
+      <li><a href="index.html" data-menu-link><span class="n mono">01</span><span class="t">Home</span></a></li>
+      <li><a href="index.html#work" data-menu-link><span class="n mono">02</span><span class="t">Work</span></a></li>
+      <li><a href="team.html" data-menu-link><span class="n mono">03</span><span class="t">Team</span></a></li>
+      <li><a href="#contact" data-menu-link><span class="n mono">04</span><span class="t">Contact</span></a></li>
+    </ol>
+    <div class="menu__side">
+      <div class="svc-prev" aria-hidden="true"><div class="lenti" id="svcLenti" data-mode="none" data-slats="10" data-a="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-700,q-75" data-b="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-700,q-75"></div></div>
+      <div class="menu__col menu__svc">
+        <h4 class="mono">Services</h4>
+        <ul id="svcList">
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-700,q-75"><span class="mono">01</span><span class="svc-t">Branding</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_89_copy_99897d2728_8CgfscrSB.webp?tr=w-700,q-75"><span class="mono">02</span><span class="svc-t">Advertising</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/ynot_copy_e926166f46_48GvxwU7G.webp?tr=w-700,q-75"><span class="mono">03</span><span class="svc-t">Film Production</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_108_copy_2_6575e3abcc_CPz3NBTmu.webp?tr=w-700,q-75"><span class="mono">04</span><span class="svc-t">Graphic Design</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_88_copy_2_db21ba2dad_R7cSAjpBY.webp?tr=w-700,q-75"><span class="mono">05</span><span class="svc-t">Social Media</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_91_copy_bbd8490322_1nE9ZG07d.webp?tr=w-700,q-75"><span class="mono">06</span><span class="svc-t">Marketing</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_13_copy_1_121fdf52ea_ClF8plHfz.webp?tr=w-700,q-75"><span class="mono">07</span><span class="svc-t">Integrated Marketing</span></li>
+        </ul>
+      </div>
+      <div class="menu__col menu__follow">
+        <h4 class="mono">Follow</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/magicinwhite" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/magicinwhite" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@magicinwhite" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.facebook.com/themagicinwhite" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ░░ HERO ░░ -->
+<section class="hero" data-theme="light">
+  <div class="wrap hero__grid">
+    <h1 class="hero__title" data-split="words">From blank slates to <em>bold</em> statements<span class="dot">.</span></h1>
+    <p class="hero__lede" data-reveal>We help brands find their voice. We are a creative studio where innovative design, thoughtful storytelling, and sharp strategy come together to reimagine brands and elevate their presence.</p>
+  </div>
+  <div class="hero__media wrap">
+    <div class="lenti lenti--hero" id="heroLenti" data-mode="scroll" data-slats="22"
+         data-a="https://ik.imagekit.io/7yturtsdn0/Vikram_poster_final_copy_3_2048x1152_331748da14_NabSMhF0c.webp?tr=w-1800,q-80"
+         data-b="https://ik.imagekit.io/7yturtsdn0/BJ_Banner_copy_2_ede7e10da2_wETqsjz7m.webp?tr=w-1800,q-80"></div>
+  </div>
+</section>
+
+<!-- ░░ WORK ░░ -->
+<section class="work section" id="work" data-theme="light">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="sec-head__t" data-split="chars">Work</h2>
+    </header>
+    <div class="work__grid">
+      <article class="tile t1" data-tile="toss" data-color="#84cc16">
+        <div class="lenti" data-mode="hover" data-slats="14" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_13_copy_1_121fdf52ea_ClF8plHfz.webp?tr=w-1400,q-80" data-bcolor="#84cc16"></div>
+        <h3 class="tile__ttl" data-letters>toss</h3>
+        <footer class="tile__cap"><span class="mono">01</span><span>toss</span><i class="arr">↗</i></footer>
+      </article>
+      <article class="tile t2" data-tile="bangalore jawans" data-color="#b91c1c">
+        <div class="lenti" data-mode="hover" data-slats="12" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_88_copy_2_db21ba2dad_R7cSAjpBY.webp?tr=w-1100,q-80" data-bcolor="#b91c1c"></div>
+        <h3 class="tile__ttl" data-letters>bangalore jawans</h3>
+        <footer class="tile__cap"><span class="mono">02</span><span>bangalore jawans</span><i class="arr">↗</i></footer>
+      </article>
+      <article class="tile t3" data-tile="YNOT" data-color="#eab308">
+        <div class="lenti" data-mode="hover" data-slats="14" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/ynot_copy_e926166f46_48GvxwU7G.webp?tr=w-1400,q-80" data-bcolor="#eab308"></div>
+        <h3 class="tile__ttl" data-letters>YNOT</h3>
+        <footer class="tile__cap"><span class="mono">03</span><span>YNOT</span><i class="arr">↗</i></footer>
+      </article>
+      <article class="tile t4" data-tile="ROCKSTAR" data-color="#1e3a8a">
+        <div class="lenti" data-mode="hover" data-slats="12" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_108_copy_2_6575e3abcc_CPz3NBTmu.webp?tr=w-1100,q-80" data-bcolor="#1e3a8a"></div>
+        <h3 class="tile__ttl" data-letters>ROCKSTAR</h3>
+        <footer class="tile__cap"><span class="mono">04</span><span>ROCKSTAR</span><i class="arr">↗</i></footer>
+      </article>
+      <article class="tile t5" data-tile="DRAMILA" data-color="#15803d">
+        <div class="lenti" data-mode="hover" data-slats="12" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_22_copy_e46b73e00c_HKcpCjRxH.webp?tr=w-1000,q-80" data-bcolor="#15803d"></div>
+        <h3 class="tile__ttl" data-letters>DRAMILA</h3>
+        <footer class="tile__cap"><span class="mono">05</span><span>DRAMILA</span><i class="arr">↗</i></footer>
+      </article>
+      <article class="tile t6" data-tile="BASK" data-color="#eab308">
+        <div class="lenti" data-mode="hover" data-slats="14" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_91_copy_bbd8490322_1nE9ZG07d.webp?tr=w-1400,q-80" data-bcolor="#eab308"></div>
+        <h3 class="tile__ttl" data-letters>BASK</h3>
+        <footer class="tile__cap"><span class="mono">06</span><span>BASK</span><i class="arr">↗</i></footer>
+      </article>
+      <article class="tile t7" data-tile="OIC" data-color="#ec4899">
+        <div class="lenti" data-mode="hover" data-slats="14" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_89_copy_99897d2728_8CgfscrSB.webp?tr=w-1400,q-80" data-bcolor="#ec4899"></div>
+        <h3 class="tile__ttl" data-letters>OIC</h3>
+        <footer class="tile__cap"><span class="mono">07</span><span>OIC</span><i class="arr">↗</i></footer>
+      </article>
+      <article class="tile t8" data-tile="REDKNOT" data-color="#b91c1c">
+        <div class="lenti" data-mode="hover" data-slats="12" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-1200,q-80" data-bcolor="#b91c1c"></div>
+        <h3 class="tile__ttl" data-letters>REDKNOT</h3>
+        <footer class="tile__cap"><span class="mono">08</span><span>REDKNOT</span><i class="arr">↗</i></footer>
+      </article>
+      <article class="tile t9" data-tile="COFFEE" data-color="#e5e7eb">
+        <div class="lenti" data-mode="hover" data-slats="18" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_113_copy_7f0bae037f_J30YsjvEb.webp?tr=w-1800,q-80" data-bcolor="#e5e7eb"></div>
+        <h3 class="tile__ttl tile__ttl--dark" data-letters>COFFEE</h3>
+        <footer class="tile__cap"><span class="mono">09</span><span>COFFEE</span><i class="arr">↗</i></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CLIENTS ░░ -->
+<section class="clients section" id="clients" data-theme="dark">
+  <div class="wrap">
+    <h2 class="clients__t" data-split="words">The companies we empower</h2>
+  </div>
+  <div class="marquee" data-dir="-1">
+    <div class="marquee__track">
+      <ul class="logos">
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/Netflix_9a4015e2f1_6ZdbgN0Z5.png" alt="Netflix" loading="lazy"></li>
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/Prime_28b8a75e8e_RB2ycf2Q2M.png" alt="Prime Video" loading="lazy"></li>
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/Jio_Hostar_25a7777338_RB0Nwt1Qw.png" alt="JioHotstar" loading="lazy"></li>
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/Zee_03a8a75571_Lhbl9_V1K.png" alt="Zee Cinema" loading="lazy"></li>
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/LYCA_e3a517c905_9G5oD_2xoF.png" alt="Lyca Productions" loading="lazy"></li>
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/Sony_214dc20422_Z8txfq8bg.png" alt="Sony" loading="lazy"></li>
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/Samsung_9e5ce6b74b_0uf0CYzim.png" alt="Samsung" loading="lazy"></li>
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/Apple_1eaaf89b74_GaU9JlVHS.png" alt="Apple" loading="lazy"></li>
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/Madras_Talkies_fb6516bb14_1Razdx6lc.png" alt="Madras Talkies" loading="lazy"></li>
+        <li><img src="https://ik.imagekit.io/7yturtsdn0/Vijay_e3aa2b2127_sWJgNVvhb.png" alt="Vijay TV" loading="lazy"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ MOVIE POSTERS ░░ -->
+<section class="posters section" id="posters" data-theme="light">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="sec-head__t" data-split="chars">Movie Poster</h2>
+    </header>
+    <div class="posters__intro">
+      <p data-reveal>A poster is a cracked-open window into a film's soul. We design each poster to capture and reflect the essence of its story, inviting viewers in before the first frame even rolls.</p>
+      <a href="#" class="btn" data-magnetic data-cursor=""><span class="btn__bg"></span><span class="btn__t" data-text="Explore">Explore</span><i class="arr">↗</i></a>
+    </div>
+    <div class="posters__row">
+      <figure class="poster p1">
+        <div class="lenti" data-mode="pointer" data-slats="16" data-cursor="Turn" data-bcolor="#F1EFE9"
+             data-a="https://ik.imagekit.io/7yturtsdn0/SD_10_3a1f2323a6_ou-oHff8m.jpg?tr=w-900,q-82"
+             data-b="https://ik.imagekit.io/7yturtsdn0/SD_09_aac7e07bc7_E2CzD54on.png?tr=w-900"></div>
+        <figcaption class="mono"><span>Super Deluxe</span><span>01 / 03</span></figcaption>
+      </figure>
+      <figure class="poster p2">
+        <div class="lenti" data-mode="pointer" data-slats="16" data-cursor="Turn" data-bcolor="#F1EFE9"
+             data-a="https://ik.imagekit.io/7yturtsdn0/PS_Nandini_01png_d9ed0f1dd0_-tDHUQN5z.jpg?tr=w-900,q-82"
+             data-b="https://ik.imagekit.io/7yturtsdn0/PS_Nandini_02_c35b30e356_iAwkeZxaO.png?tr=w-900"></div>
+        <figcaption class="mono"><span>Ponniyin Selvan · Nandini</span><span>02 / 03</span></figcaption>
+      </figure>
+      <figure class="poster p3">
+        <div class="lenti" data-mode="pointer" data-slats="16" data-cursor="Turn" data-bcolor="#F1EFE9"
+             data-a="https://ik.imagekit.io/7yturtsdn0/Kaththi_01_02e9f4bf2a_qXvmb8sFE.jpg?tr=w-900,q-82"
+             data-b="https://ik.imagekit.io/7yturtsdn0/Kaththi_02_44b7828fce_MBIbTTe-2.png?tr=w-900"></div>
+        <figcaption class="mono"><span>Kaththi</span><span>03 / 03</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ PRODUCT DESIGN ░░ -->
+<section class="product section" id="product" data-theme="dark">
+  <div class="wrap">
+    <header class="sec-head sec-head--dark">
+      <h2 class="sec-head__t" data-split="chars">Product Design</h2>
+    </header>
+    <p class="product__intro" data-reveal>We create smart, functional product designs, from concept to final prototype.</p>
+
+    <div class="product__stage">
+      <div class="product__video" id="productVideo" data-cursor="ibangle">
+        <video muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/7yturtsdn0/ibangle_asset_ce4f42822a_k_ZP_5d3y_MQX_78731ac3f9_Z6tXJPgK-.webp?tr=w-1400">
+          <source src="https://ik.imagekit.io/7yturtsdn0/ibangle_product_9060b21a3d_T2YHblDHb.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="product__copy">
+        <h3 class="product__name" data-split="chars">ibangle</h3>
+        <p data-reveal>Long before wearables were a thing, our founder Gopi Prasannaa's innovative iBangle rewrote the rules of personal audio.</p>
+        <p data-reveal>This first-of-its-kind, bangle-style iPod, with touch-sensitive controls, virtual earphones, and an adjustable fit, redefined the personal audio experience. It caught global attention, landing on CNN's 21st Century Visionary list and Yanko Design's Best of 2008. A real game-changer in wearable tech.</p>
+        <a href="#" class="btn btn--light" data-magnetic><span class="btn__bg"></span><span class="btn__t" data-text="Explore more">Explore more</span><i class="arr">↗</i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ TESTIMONIALS ░░ -->
+<section class="voices section" id="voices" data-theme="light">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="sec-head__t" data-split="chars">Voices</h2>
+    </header>
+
+    <div class="voices__stage" id="vStage" data-cursor="Drag">
+      <article class="quote is-active">
+        <div class="quote__pic"><div class="lenti" data-mode="hover" data-slats="12" data-a="https://ik.imagekit.io/7yturtsdn0/MR_1_58208c8489_nk_dFK14U.webp?tr=w-1000,q-80" data-bcolor="#FF7A00"></div></div>
+        <div class="quote__body">
+          <span class="quote__mark" aria-hidden="true">“</span>
+          <h3 class="quote__h">Collaborating with him is always a very exciting experience.</h3>
+          <p class="quote__p">Design is story-telling, and it is most evident in movie poster designs. A film poster is the first glimpse of the entire experience and is therefore very crucial. To capture the essence of the film, its mood, and character dynamics in a single frame - with composition, font style and image, is a specialised skill. Gopi Prasannaa has been doing this for several years, with tremendous artistic flair. Collaborating with him is always a very exciting experience.</p>
+          <p class="quote__by mono">— Mani Ratnam</p>
+        </div>
+      </article>
+      <article class="quote">
+        <div class="quote__pic"><div class="lenti" data-mode="hover" data-slats="12" data-a="https://ik.imagekit.io/7yturtsdn0/attila_1bad1a47ce_BcoUz3-Og.png?tr=w-1000,q-80" data-bcolor="#FF7A00"></div></div>
+        <div class="quote__body">
+          <span class="quote__mark" aria-hidden="true">“</span>
+          <h3 class="quote__h">Gopi prasannaa's work doesn't just speak, it resonates.</h3>
+          <p class="quote__p">Gopi Prasannaa doesn't just design, he listens to the heartbeat of a story. He has this rare gift of seeing what is unspoken, of feeling what is not yet visible, and then bringing it to life with a quiet brilliance. A director may narrate a vision, but Gopi transforms that vision into something you can feel, something that stays with you. His work doesn't just speak - it resonates.</p>
+          <p class="quote__by mono">— Atlee</p>
+        </div>
+      </article>
+    </div>
+    <div class="vtabs" id="vTabs" role="tablist" aria-label="Testimonials">
+      <button class="vtab is-active" role="tab" aria-selected="true"><span class="vtab__bar"><i></i></span><span class="vtab__name">Mani Ratnam</span></button>
+      <button class="vtab" role="tab" aria-selected="false"><span class="vtab__bar"><i></i></span><span class="vtab__name">Atlee</span></button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer" id="contact" data-theme="dark">
+  <div class="wrap footer__top">
+    <div class="footer__mark" id="footerMark"><img src="assets/logo-full-orange.png" alt="Magic In White — Integrated Creative Studio" width="583" height="895"></div>
+    <div class="footer__cols">
+      <div class="fcol">
+        <h4 class="mono">Home</h4>
+        <ul><li><a href="https://magicinwhite.com/about">Why us</a></li></ul>
+      </div>
+      <div class="fcol">
+        <h4 class="mono">Work</h4>
+        <ul><li>Film Posters</li><li>Vfx</li><li>Stop Motions</li><li>Animation</li><li>Logo Animation</li><li>Event</li><li>Branding</li><li>Promotions</li></ul>
+      </div>
+      <div class="fcol">
+        <h4 class="mono">Service</h4>
+        <ul><li>Branding</li><li>Advertising</li><li>Film Production</li><li>Graphic Design</li><li>Social Media</li><li>Marketing</li><li>Integrated Marketing</li></ul>
+      </div>
+      <div class="fcol">
+        <h4 class="mono">Team</h4>
+        <ul><li><a href="team.html">Meet the Team</a></li></ul>
+      </div>
+      <div class="fcol">
+        <h4 class="mono">Contact</h4>
+        <ul><li><a href="https://magicinwhite.com/contact">Contact Information</a></li></ul>
+        <ul class="fcol__soc">
+          <li><a href="https://www.instagram.com/magicinwhite" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/magicinwhite" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@magicinwhite" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.facebook.com/themagicinwhite" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer__base mono">
+    <span>© 2026 Magic In White</span>
+    <span>Integrated Creative Studio</span>
+    <a href="#top" data-magnetic id="toTop">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
