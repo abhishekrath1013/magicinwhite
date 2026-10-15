@@ -447,6 +447,7 @@ function initTeam() {
     const d = data[k];
     role.textContent = d.role; name.textContent = d.name; bio.innerHTML = d.bio; bio.scrollTop = 0;
     words = splitWords(name);
+    gsap.set(name, { opacity: 1 });
     gsap.set(words, { yPercent: 115 }); gsap.set([role, ...bio.children], { opacity: 0, y: 20 });
   };
   const textIn = (delay = 0) => {
