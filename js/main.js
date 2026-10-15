@@ -62,6 +62,8 @@ function splitWords(el, chars = false) {
    the sum of a "reveal" flip (staggered, driven by scroll-in) and a
    "turn" flip (staggered, driven by pointer / hover / scroll scrub). */
 const lentis = [];
+const _pre = {};
+const preload = url => _pre[url] || (_pre[url] = new Promise(res => { const im = new Image(); im.onload = im.onerror = () => res(); im.src = url; }));
 class Lenti {
   constructor(el) {
     this.el = el;
@@ -124,13 +126,23 @@ class Lenti {
         onUpdate: s => { this.turnT = clamp(s.progress * 1.25 - .05); } });
     }
   }
-  setImage(url) {   // flip to a new picture: write it onto the hidden face, then turn
+  async setImage(url) {   // flip to a new picture: decode it on the hidden face first, then turn
+    const id = this._swap = (this._swap || 0) + 1;
+    await preload(url);
+    if (id !== this._swap) return;
     const toBack = this.turnT < .5;
-    $$(toBack ? '.lenti__b img' : '.lenti__f img', this.el).forEach(im => { im.src = url; });
+    const imgs = $$(toBack ? '.lenti__b img' : '.lenti__f img', this.el);
+    imgs.forEach(im => { im.src = url; });
+    await Promise.all(imgs.map(im => im.decode ? im.decode().catch(() => {}) : null));
+    if (id !== this._swap) return;
     this.turnT = toBack ? 1 : 0;
   }
-  setBoth(url) {    // swap picture on both faces without animating
-    $$('img', this.el).forEach(im => { im.src = url; });
+  async setBoth(url) {    // swap picture on both faces without animating (resolves once painted-ready)
+    this._swap = (this._swap || 0) + 1;
+    await preload(url);
+    const imgs = $$('img', this.el);
+    imgs.forEach(im => { im.src = url; });
+    await Promise.all(imgs.map(im => im.decode ? im.decode().catch(() => {}) : null));
     this.turn = this.turnT = 0; this.dirty = true;
   }
   reveal(delay = 0, dur = 1.8) {
@@ -424,6 +436,7 @@ function initTeam() {
   const lent = lentis.find(l => l.el.id === 'mdlLenti');
   const role = $('.mdl__role', mdl), name = $('.mdl__name', mdl), bio = $('.mdl__bio', mdl);
   const cards = $$('.member', grid);
+  $$('.member').forEach(c => preload(c.dataset.photo));   // warm the big portraits so swaps never flash
   const data = cards.map(c => ({ name: c.dataset.name, role: c.dataset.role, photo: c.dataset.photo, bio: $('.member__bio', c).innerHTML }));
   cards.forEach((c, i) => { cards[i].tabIndex = 0; });
   gsap.from(cards, { y: 50, opacity: 0, duration: 1.1, stagger: .07, ease: 'power3.out', delay: 1.6,
@@ -445,9 +458,10 @@ function initTeam() {
     mdl.classList.add('is-open'); mdl.setAttribute('aria-hidden', 'false');
     lenis.stop(); document.documentElement.classList.add('mdl-open');
     fill(k);
-    lent.show = lent.showT = 0; lent.setBoth(data[k].photo);
+    lent.show = lent.showT = 0; lent.dirty = true; lent.el.style.visibility = 'hidden';
     gsap.fromTo(bg, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: .8, ease: 'power3.inOut' });
-    lent.reveal(.65, 1.3); textIn(.75);
+    lent.setBoth(data[k].photo).then(() => { lent.show = lent.showT = 0; lent.el.style.visibility = ''; lent.reveal(.25, 1.3); });
+    textIn(.75);
     gsap.fromTo('.mdl__close, .mdl__nav', { opacity: 0 }, { opacity: 1, duration: .6, delay: .8 });
   };
   const close = () => {
