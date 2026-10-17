@@ -35,48 +35,44 @@
 <!-- ░░ HEADER ░░ -->
 <header class="header" id="header">
   <a href="index.html" class="header__logo" aria-label="Magic In White — home" data-cursor="Home"><img src="assets/logo-mark-blue.png" alt="" width="380" height="435"></a>
-  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu" data-magnetic>
-    <span class="burger__txt"><span data-open>Menu</span><span data-close>Close</span></span>
-    <span class="burger__bars"><i></i><i></i><i></i><i></i></span>
-  </button>
+  <nav class="nav" id="nav" aria-label="Main">
+    <span class="nav__pill" aria-hidden="true"></span>
+    <a class="nav__a" href="index.html" data-page="home">Home</a>
+    <a class="nav__a" href="index.html#work">Work</a>
+    <button class="nav__a nav__btn" id="ddBtn" type="button" aria-expanded="false" aria-controls="mega" aria-haspopup="true">Services<i class="nav__caret"></i></button>
+    <a class="nav__a" href="team.html" data-page="team">Team</a>
+    <a class="nav__a" href="#contact">Contact</a>
+  </nav>
 </header>
 
-<!-- ░░ MENU ░░ -->
-<nav class="menu" id="menu" aria-label="Main" aria-hidden="true">
-  <div class="menu__slats" id="menuSlats"></div>
-  <div class="menu__body">
-    <ol class="menu__links">
-      <li><a href="index.html" data-menu-link><span class="n mono">01</span><span class="t">Home</span></a></li>
-      <li><a href="index.html#work" data-menu-link><span class="n mono">02</span><span class="t">Work</span></a></li>
-      <li><a href="team.html" data-menu-link><span class="n mono">03</span><span class="t">Team</span></a></li>
-      <li><a href="#contact" data-menu-link><span class="n mono">04</span><span class="t">Contact</span></a></li>
-    </ol>
-    <div class="menu__side">
-      <div class="svc-prev" aria-hidden="true"><div class="lenti" id="svcLenti" data-mode="none" data-slats="10" data-a="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-700,q-75" data-b="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-700,q-75"></div></div>
-      <div class="menu__col menu__svc">
-        <h4 class="mono">Services</h4>
-        <ul id="svcList">
-          <li data-img="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-700,q-75"><span class="mono">01</span><span class="svc-t">Branding</span></li>
-          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_89_copy_99897d2728_8CgfscrSB.webp?tr=w-700,q-75"><span class="mono">02</span><span class="svc-t">Advertising</span></li>
-          <li data-img="https://ik.imagekit.io/7yturtsdn0/ynot_copy_e926166f46_48GvxwU7G.webp?tr=w-700,q-75"><span class="mono">03</span><span class="svc-t">Film Production</span></li>
-          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_108_copy_2_6575e3abcc_CPz3NBTmu.webp?tr=w-700,q-75"><span class="mono">04</span><span class="svc-t">Graphic Design</span></li>
-          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_88_copy_2_db21ba2dad_R7cSAjpBY.webp?tr=w-700,q-75"><span class="mono">05</span><span class="svc-t">Social Media</span></li>
-          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_91_copy_bbd8490322_1nE9ZG07d.webp?tr=w-700,q-75"><span class="mono">06</span><span class="svc-t">Marketing</span></li>
-          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_13_copy_1_121fdf52ea_ClF8plHfz.webp?tr=w-700,q-75"><span class="mono">07</span><span class="svc-t">Integrated Marketing</span></li>
-        </ul>
+<!-- ░░ SERVICES MEGA MENU ░░ -->
+<div class="mega" id="mega" aria-hidden="true">
+  <div class="mega__scrim" id="megaScrim"></div>
+  <div class="mega__panel" id="megaPanel">
+    <div class="mega__in">
+      <ul class="mega__list" id="svcList">
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-900,q-78" data-name="Branding"><span class="mono">01</span><span class="mega__t">Branding</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_89_copy_99897d2728_8CgfscrSB.webp?tr=w-900,q-78" data-name="Advertising"><span class="mono">02</span><span class="mega__t">Advertising</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/ynot_copy_e926166f46_48GvxwU7G.webp?tr=w-900,q-78" data-name="Film Production"><span class="mono">03</span><span class="mega__t">Film Production</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_108_copy_2_6575e3abcc_CPz3NBTmu.webp?tr=w-900,q-78" data-name="Graphic Design"><span class="mono">04</span><span class="mega__t">Graphic Design</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_88_copy_2_db21ba2dad_R7cSAjpBY.webp?tr=w-900,q-78" data-name="Social Media"><span class="mono">05</span><span class="mega__t">Social Media</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_91_copy_bbd8490322_1nE9ZG07d.webp?tr=w-900,q-78" data-name="Marketing"><span class="mono">06</span><span class="mega__t">Marketing</span></li>
+          <li data-img="https://ik.imagekit.io/7yturtsdn0/Layer_13_copy_1_121fdf52ea_ClF8plHfz.webp?tr=w-900,q-78" data-name="Integrated Marketing"><span class="mono">07</span><span class="mega__t">Integrated Marketing</span></li>
+      </ul>
+      <div class="mega__prev" aria-hidden="true">
+        <div class="pic" id="svcPic" data-mode="none" data-a="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-900,q-78" data-b="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-900,q-78"></div>
+        <p class="mono mega__cap" id="svcCap">Branding</p>
       </div>
-      <div class="menu__col menu__follow">
-        <h4 class="mono">Follow</h4>
-        <ul>
-          <li><a href="https://www.instagram.com/magicinwhite" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/magicinwhite" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://www.youtube.com/@magicinwhite" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="https://www.facebook.com/themagicinwhite" target="_blank" rel="noopener">Facebook</a></li>
-        </ul>
+      <div class="mega__side">
+        <span class="mono">Follow</span>
+        <a href="https://www.instagram.com/magicinwhite" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/magicinwhite" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@magicinwhite" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.facebook.com/themagicinwhite" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
   </div>
-</nav>
+</div>
 
 <main id="top">
 
@@ -87,7 +83,7 @@
     <p class="hero__lede" data-reveal>We help brands find their voice. We are a creative studio where innovative design, thoughtful storytelling, and sharp strategy come together to reimagine brands and elevate their presence.</p>
   </div>
   <div class="hero__media wrap">
-    <div class="lenti lenti--hero" id="heroLenti" data-mode="scroll" data-slats="22"
+    <div class="pic pic--hero" id="heroPic" data-mode="none"
          data-a="https://ik.imagekit.io/7yturtsdn0/Vikram_poster_final_copy_3_2048x1152_331748da14_NabSMhF0c.webp?tr=w-1800,q-80"
          data-b="https://ik.imagekit.io/7yturtsdn0/BJ_Banner_copy_2_ede7e10da2_wETqsjz7m.webp?tr=w-1800,q-80"></div>
   </div>
@@ -100,48 +96,48 @@
       <h2 class="sec-head__t" data-split="chars">Work</h2>
     </header>
     <div class="work__grid">
-      <article class="tile t1" data-tile="toss" data-color="#84cc16">
-        <div class="lenti" data-mode="hover" data-slats="14" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_13_copy_1_121fdf52ea_ClF8plHfz.webp?tr=w-1400,q-80" data-bcolor="#84cc16"></div>
+      <article class="tile" data-tile="toss" data-color="#84cc16">
+        <div class="pic" data-mode="none" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_13_copy_1_121fdf52ea_ClF8plHfz.webp?tr=w-1100,q-78"></div>
         <h3 class="tile__ttl" data-letters>toss</h3>
         <footer class="tile__cap"><span class="mono">01</span><span>toss</span><i class="arr">↗</i></footer>
       </article>
-      <article class="tile t2" data-tile="bangalore jawans" data-color="#b91c1c">
-        <div class="lenti" data-mode="hover" data-slats="12" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_88_copy_2_db21ba2dad_R7cSAjpBY.webp?tr=w-1100,q-80" data-bcolor="#b91c1c"></div>
+      <article class="tile" data-tile="bangalore jawans" data-color="#b91c1c">
+        <div class="pic" data-mode="none" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_88_copy_2_db21ba2dad_R7cSAjpBY.webp?tr=w-1100,q-78"></div>
         <h3 class="tile__ttl" data-letters>bangalore jawans</h3>
         <footer class="tile__cap"><span class="mono">02</span><span>bangalore jawans</span><i class="arr">↗</i></footer>
       </article>
-      <article class="tile t3" data-tile="YNOT" data-color="#eab308">
-        <div class="lenti" data-mode="hover" data-slats="14" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/ynot_copy_e926166f46_48GvxwU7G.webp?tr=w-1400,q-80" data-bcolor="#eab308"></div>
+      <article class="tile" data-tile="YNOT" data-color="#eab308">
+        <div class="pic" data-mode="none" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/ynot_copy_e926166f46_48GvxwU7G.webp?tr=w-1100,q-78"></div>
         <h3 class="tile__ttl" data-letters>YNOT</h3>
         <footer class="tile__cap"><span class="mono">03</span><span>YNOT</span><i class="arr">↗</i></footer>
       </article>
-      <article class="tile t4" data-tile="ROCKSTAR" data-color="#1e3a8a">
-        <div class="lenti" data-mode="hover" data-slats="12" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_108_copy_2_6575e3abcc_CPz3NBTmu.webp?tr=w-1100,q-80" data-bcolor="#1e3a8a"></div>
+      <article class="tile" data-tile="ROCKSTAR" data-color="#1e3a8a">
+        <div class="pic" data-mode="none" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_108_copy_2_6575e3abcc_CPz3NBTmu.webp?tr=w-1100,q-78"></div>
         <h3 class="tile__ttl" data-letters>ROCKSTAR</h3>
         <footer class="tile__cap"><span class="mono">04</span><span>ROCKSTAR</span><i class="arr">↗</i></footer>
       </article>
-      <article class="tile t5" data-tile="DRAMILA" data-color="#15803d">
-        <div class="lenti" data-mode="hover" data-slats="12" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_22_copy_e46b73e00c_HKcpCjRxH.webp?tr=w-1000,q-80" data-bcolor="#15803d"></div>
+      <article class="tile" data-tile="DRAMILA" data-color="#15803d">
+        <div class="pic" data-mode="none" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_22_copy_e46b73e00c_HKcpCjRxH.webp?tr=w-1100,q-78"></div>
         <h3 class="tile__ttl" data-letters>DRAMILA</h3>
         <footer class="tile__cap"><span class="mono">05</span><span>DRAMILA</span><i class="arr">↗</i></footer>
       </article>
-      <article class="tile t6" data-tile="BASK" data-color="#eab308">
-        <div class="lenti" data-mode="hover" data-slats="14" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_91_copy_bbd8490322_1nE9ZG07d.webp?tr=w-1400,q-80" data-bcolor="#eab308"></div>
+      <article class="tile" data-tile="BASK" data-color="#eab308">
+        <div class="pic" data-mode="none" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_91_copy_bbd8490322_1nE9ZG07d.webp?tr=w-1100,q-78"></div>
         <h3 class="tile__ttl" data-letters>BASK</h3>
         <footer class="tile__cap"><span class="mono">06</span><span>BASK</span><i class="arr">↗</i></footer>
       </article>
-      <article class="tile t7" data-tile="OIC" data-color="#ec4899">
-        <div class="lenti" data-mode="hover" data-slats="14" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_89_copy_99897d2728_8CgfscrSB.webp?tr=w-1400,q-80" data-bcolor="#ec4899"></div>
+      <article class="tile" data-tile="OIC" data-color="#ec4899">
+        <div class="pic" data-mode="none" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_89_copy_99897d2728_8CgfscrSB.webp?tr=w-1100,q-78"></div>
         <h3 class="tile__ttl" data-letters>OIC</h3>
         <footer class="tile__cap"><span class="mono">07</span><span>OIC</span><i class="arr">↗</i></footer>
       </article>
-      <article class="tile t8" data-tile="REDKNOT" data-color="#b91c1c">
-        <div class="lenti" data-mode="hover" data-slats="12" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-1200,q-80" data-bcolor="#b91c1c"></div>
+      <article class="tile" data-tile="REDKNOT" data-color="#b91c1c">
+        <div class="pic" data-mode="none" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/red_knot_copy_1_f049f8dc0b_dNzNIBZZeq.webp?tr=w-1100,q-78"></div>
         <h3 class="tile__ttl" data-letters>REDKNOT</h3>
         <footer class="tile__cap"><span class="mono">08</span><span>REDKNOT</span><i class="arr">↗</i></footer>
       </article>
-      <article class="tile t9" data-tile="COFFEE" data-color="#e5e7eb">
-        <div class="lenti" data-mode="hover" data-slats="18" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_113_copy_7f0bae037f_J30YsjvEb.webp?tr=w-1800,q-80" data-bcolor="#e5e7eb"></div>
+      <article class="tile" data-tile="COFFEE" data-color="#e5e7eb">
+        <div class="pic" data-mode="none" data-cursor="View" data-a="https://ik.imagekit.io/7yturtsdn0/Layer_113_copy_7f0bae037f_J30YsjvEb.webp?tr=w-1100,q-78"></div>
         <h3 class="tile__ttl tile__ttl--dark" data-letters>COFFEE</h3>
         <footer class="tile__cap"><span class="mono">09</span><span>COFFEE</span><i class="arr">↗</i></footer>
       </article>
@@ -178,29 +174,38 @@
     <header class="sec-head">
       <h2 class="sec-head__t" data-split="chars">Movie Poster</h2>
     </header>
-    <div class="posters__intro">
-      <p data-reveal>A poster is a cracked-open window into a film's soul. We design each poster to capture and reflect the essence of its story, inviting viewers in before the first frame even rolls.</p>
-      <a href="#" class="btn" data-magnetic data-cursor=""><span class="btn__bg"></span><span class="btn__t" data-text="Explore">Explore</span><i class="arr">↗</i></a>
-    </div>
-    <div class="posters__row">
-      <figure class="poster p1">
-        <div class="lenti" data-mode="pointer" data-slats="16" data-cursor="Turn" data-bcolor="#F1EFE9"
-             data-a="https://ik.imagekit.io/7yturtsdn0/SD_10_3a1f2323a6_ou-oHff8m.jpg?tr=w-900,q-82"
-             data-b="https://ik.imagekit.io/7yturtsdn0/SD_09_aac7e07bc7_E2CzD54on.png?tr=w-900"></div>
-        <figcaption class="mono"><span>Super Deluxe</span><span>01 / 03</span></figcaption>
-      </figure>
-      <figure class="poster p2">
-        <div class="lenti" data-mode="pointer" data-slats="16" data-cursor="Turn" data-bcolor="#F1EFE9"
-             data-a="https://ik.imagekit.io/7yturtsdn0/PS_Nandini_01png_d9ed0f1dd0_-tDHUQN5z.jpg?tr=w-900,q-82"
-             data-b="https://ik.imagekit.io/7yturtsdn0/PS_Nandini_02_c35b30e356_iAwkeZxaO.png?tr=w-900"></div>
-        <figcaption class="mono"><span>Ponniyin Selvan · Nandini</span><span>02 / 03</span></figcaption>
-      </figure>
-      <figure class="poster p3">
-        <div class="lenti" data-mode="pointer" data-slats="16" data-cursor="Turn" data-bcolor="#F1EFE9"
-             data-a="https://ik.imagekit.io/7yturtsdn0/Kaththi_01_02e9f4bf2a_qXvmb8sFE.jpg?tr=w-900,q-82"
-             data-b="https://ik.imagekit.io/7yturtsdn0/Kaththi_02_44b7828fce_MBIbTTe-2.png?tr=w-900"></div>
-        <figcaption class="mono"><span>Kaththi</span><span>03 / 03</span></figcaption>
-      </figure>
+    <div class="pcar" id="pcar">
+      <div class="pcar__txt">
+        <p class="pcar__intro" data-reveal>A poster is a cracked-open window into a film's soul. We design each poster to capture and reflect the essence of its story, inviting viewers in before the first frame even rolls.</p>
+        <div class="pcar__names" id="pNames">
+        <h3 class="pcar__n is-active">Super Deluxe</h3>
+        <h3 class="pcar__n">Ponniyin Selvan · Nandini</h3>
+        <h3 class="pcar__n">Kaththi</h3>
+        </div>
+        <div class="ptabs" id="pTabs" role="tablist" aria-label="Movie posters">
+        <button class="ptab is-active" role="tab" aria-selected="true"><span class="ptab__bar"><i></i></span><span class="ptab__name">Super Deluxe</span></button>
+        <button class="ptab" role="tab" aria-selected="false"><span class="ptab__bar"><i></i></span><span class="ptab__name">Ponniyin Selvan · Nandini</span></button>
+        <button class="ptab" role="tab" aria-selected="false"><span class="ptab__bar"><i></i></span><span class="ptab__name">Kaththi</span></button>
+        </div>
+        <div class="pcar__ctl">
+          <a href="#" class="btn" data-magnetic><span class="btn__bg"></span><span class="btn__t">Explore</span><i class="arr">↗</i></a>
+          <div class="pcar__arrows">
+            <button class="pbtn" id="pPrev" aria-label="Previous poster" data-magnetic><span>←</span></button>
+            <button class="pbtn" id="pNext" aria-label="Next poster" data-magnetic><span>→</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="pcar__stage" id="pStage" data-cursor="View">
+        <figure class="pslide is-active" aria-label="Super Deluxe">
+          <div class="pic" data-mode="pointer" data-a="https://ik.imagekit.io/7yturtsdn0/SD_10_3a1f2323a6_ou-oHff8m.jpg?tr=w-900,q-82" data-b="https://ik.imagekit.io/7yturtsdn0/SD_09_aac7e07bc7_E2CzD54on.png?tr=w-900"></div>
+        </figure>
+        <figure class="pslide" aria-label="Ponniyin Selvan · Nandini">
+          <div class="pic" data-mode="pointer" data-a="https://ik.imagekit.io/7yturtsdn0/PS_Nandini_01png_d9ed0f1dd0_-tDHUQN5z.jpg?tr=w-900,q-82" data-b="https://ik.imagekit.io/7yturtsdn0/PS_Nandini_02_c35b30e356_iAwkeZxaO.png?tr=w-900"></div>
+        </figure>
+        <figure class="pslide" aria-label="Kaththi">
+          <div class="pic" data-mode="pointer" data-a="https://ik.imagekit.io/7yturtsdn0/Kaththi_01_02e9f4bf2a_qXvmb8sFE.jpg?tr=w-900,q-82" data-b="https://ik.imagekit.io/7yturtsdn0/Kaththi_02_44b7828fce_MBIbTTe-2.png?tr=w-900"></div>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
@@ -238,7 +243,7 @@
 
     <div class="voices__stage" id="vStage" data-cursor="Drag">
       <article class="quote is-active">
-        <div class="quote__pic"><div class="lenti" data-mode="hover" data-slats="12" data-a="https://ik.imagekit.io/7yturtsdn0/MR_1_58208c8489_nk_dFK14U.webp?tr=w-1000,q-80" data-bcolor="#FF7A00"></div></div>
+        <div class="quote__pic"><div class="pic" data-mode="hover" data-a="https://ik.imagekit.io/7yturtsdn0/MR_1_58208c8489_nk_dFK14U.webp?tr=w-1000,q-80"></div></div>
         <div class="quote__body">
           <span class="quote__mark" aria-hidden="true">“</span>
           <h3 class="quote__h">Collaborating with him is always a very exciting experience.</h3>
@@ -247,7 +252,7 @@
         </div>
       </article>
       <article class="quote">
-        <div class="quote__pic"><div class="lenti" data-mode="hover" data-slats="12" data-a="https://ik.imagekit.io/7yturtsdn0/attila_1bad1a47ce_BcoUz3-Og.png?tr=w-1000,q-80" data-bcolor="#FF7A00"></div></div>
+        <div class="quote__pic"><div class="pic" data-mode="hover" data-a="https://ik.imagekit.io/7yturtsdn0/attila_1bad1a47ce_BcoUz3-Og.png?tr=w-1000,q-80"></div></div>
         <div class="quote__body">
           <span class="quote__mark" aria-hidden="true">“</span>
           <h3 class="quote__h">Gopi prasannaa's work doesn't just speak, it resonates.</h3>
